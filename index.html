@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="author" content="Eduardo Barbosa Silva">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="author" content="Eduardo Barbosa Silva" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>🧮 Calculadora de IMC</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <div class="background-decoration">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+    </div>
+
     <div class="container">
-        <label for="altura" style="grid-area: label1;">Digite sua altura em centimetros(cm)</label>
-        <label for="peso" style="grid-area: label2;">Digite seu peso atual em Quilogramas</label>
-        <input type="number" name="altura" required class="input altura" style="grid-area: input01;">
-        <input type="number" name="peso" required class="input peso" style="grid-area: input02;">
-        <button class="calcularBtn" style="grid-area: btn;">Calcular</button>
-        <div class="resultado" style="grid-area: resultado;"></div>
-        <div class="erro" style="grid-area: erro;"></div>
+      <div class="header">
+        <h1>🧮 Calculadora de IMC</h1>
+        <p>Descubra seu Índice de Massa Corporal</p>
+      </div>
+
+      <div class="input-group" style="grid-area: group1">
+        <label for="altura">Altura (cm)</label>
+        <input
+          type="number"
+          name="altura"
+          id="altura"
+          placeholder="Ex: 175"
+          required
+          class="input altura"
+        />
+      </div>
+
+      <div class="input-group" style="grid-area: group2">
+        <label for="peso">Peso (kg)</label>
+        <input
+          type="number"
+          name="peso"
+          id="peso"
+          placeholder="Ex: 70"
+          required
+          class="input peso"
+        />
+      </div>
+
+      <button class="calcularBtn" style="grid-area: btn">
+        <span>Calcular IMC</span>
+      </button>
+
+      <div class="resultado" style="grid-area: resultado"></div>
+      <div class="erro" style="grid-area: erro"></div>
     </div>
 
     <script src="ts/script.js"></script>
-</body>
-
+  </body>
 </html>
